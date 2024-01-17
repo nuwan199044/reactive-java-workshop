@@ -20,7 +20,9 @@ public class Exercise1 {
         // Print the second and third numbers in intNumbersStream that's greater than 5
         System.out.println("Print the second and third numbers in intNumbersStream that's greater than 5");
         StreamSources.intNumbersStream().filter(number -> number > 5)
-                .findFirst();
+                .skip(1)
+                .limit(2)
+                .forEach(number -> System.out.println(number));
         System.out.println("=============================");
 
         //  Print the first number in intNumbersStream that's greater than 5.
